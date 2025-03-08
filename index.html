@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design de Logótipos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .portfolio img { width: 100px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Criação de Logótipos Profissionais</h1>
+        <p>Designs exclusivos para dar identidade ao seu negócio!</p>
+        <a href="#pedido" class="btn">Fazer Pedido</a>
+        
+        <h2>Portfólio</h2>
+        <div class="portfolio">
+            <img src="logo1.png" alt="Logótipo 1">
+            <img src="logo2.png" alt="Logótipo 2">
+        </div>
+        
+        <h2 id="pedido">Fazer um Pedido</h2>
+        <form action="https://formspree.io/f/YOUR_EMAIL" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required><br><br>
+            <input type="email" name="email" placeholder="Seu Email" required><br><br>
+            <textarea name="detalhes" placeholder="Descreva o que deseja" required></textarea><br><br>
+            <button type="submit" class="btn">Enviar Pedido</button>
+        </form>
+        
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:teuemail@gmail.com">teuemail@gmail.com</a></p>
+    </div>
+</body>
+</html>
