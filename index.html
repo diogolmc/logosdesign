@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to right, #1a1a2e 0%, #0f3460 25%, #0f3460 75%, #1a1a2e 100%);
+            background: linear-gradient(to right, #2c3e50 0%, #34495e 25%, #34495e 75%, #2c3e50 100%);
             color: #fff;
             margin: 0;
             padding: 0;
@@ -16,7 +16,7 @@
             justify-content: space-between;
         }
         header {
-            background: linear-gradient(90deg, #8e44ad, #9b59b6);
+            background: linear-gradient(90deg, #e67e22, #d35400);
             color: white;
             padding: 20px;
             font-size: 26px;
@@ -28,18 +28,18 @@
         .container {
             max-width: 1000px;
             margin: 40px auto;
-            background: rgba(22, 33, 62, 0.95);
+            background: rgba(52, 73, 94, 0.95);
             padding: 50px 40px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             text-align: center;
-            border: 2px solid #9b59b6;
+            border: 2px solid #e67e22;
             flex-grow: 1;
         }
         h1, h2 {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            color: #9b59b6;
+            color: #e67e22;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -67,27 +67,16 @@
             width: 45%;
             max-width: 300px;
             border-radius: 10px;
-            border: 1px solid #9b59b6;
-            background-color: #0f3460;
+            border: 1px solid #e67e22;
+            background-color: #34495e;
             padding: 10px;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s forwards;
         }
-        .logos img:nth-child(1) { animation-delay: 0.2s; }
-        .logos img:nth-child(2) { animation-delay: 0.4s; }
-        .logos img:nth-child(3) { animation-delay: 0.6s; }
-        .logos img:nth-child(4) { animation-delay: 0.8s; }
-        .logos img:nth-child(5) { animation-delay: 1s; }
-        .logos img:nth-child(6) { animation-delay: 1.2s; }
-        .logos img:nth-child(7) { animation-delay: 1.4s; }
-        .logos img:nth-child(8) { animation-delay: 1.6s; }
-        .logos img:nth-child(9) { animation-delay: 1.8s; }
-        .logos img:nth-child(10) { animation-delay: 2s; }
-
         .logos img:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.5);
         }
         @keyframes fadeInUp {
             to {
@@ -101,7 +90,7 @@
         }
         .contact a {
             display: inline-block;
-            background: #9b59b6;
+            background: #e67e22;
             color: #fff;
             text-decoration: none;
             font-weight: 600;
@@ -111,7 +100,7 @@
             transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
         .contact a:hover {
-            background: #8e44ad;
+            background: #d35400;
             color: white;
             transform: scale(1.05);
         }
@@ -124,11 +113,11 @@
         }
         .sidebar-left, .sidebar-right {
             width: 300px;
-            background: rgba(22, 33, 62, 0.95);
+            background: rgba(52, 73, 94, 0.95);
             padding: 20px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            border: 2px solid #9b59b6;
+            border: 2px solid #e67e22;
             position: fixed;
             top: 120px;
         }
@@ -138,12 +127,10 @@
         .sidebar-right {
             right: 20px;
         }
-        .sidebar-left ul {
-            padding-left: 20px;
-            color: #ccc;
-        }
-        .sidebar-left li {
-            margin-bottom: 10px;
+        .sidebar-left p::after {
+            content: ' ✔';
+            color: #27ae60;
+            margin-left: 5px;
         }
         .sidebar-right form {
             display: flex;
@@ -160,14 +147,14 @@
             font-size: 14px;
         }
         .sidebar-right button {
-            background: #9b59b6;
+            background: #e67e22;
             color: white;
             cursor: pointer;
             font-weight: bold;
             transition: background 0.3s ease;
         }
         .sidebar-right button:hover {
-            background: #8e44ad;
+            background: #d35400;
         }
     </style>
 </head>
@@ -179,22 +166,6 @@
         <p>Design Simples: 3-5 dias</p>
         <p>Design Completo: 7-10 dias</p>
         <p>Pacotes Personalizados: Sob consulta</p>
-
-        <hr style="margin: 20px 0; border: 1px solid #9b59b6;">
-
-        <h3>Nossos Diferenciais</h3>
-        <ul>
-            <li><strong>Pontualidade</strong> na entrega</li>
-            <li><strong>Criatividade</strong> que impressiona</li>
-            <li><strong>Design Exclusivo</strong> e sob medida</li>
-            <li><strong>Atendimento Personalizado</strong> para cada cliente</li>
-        </ul>
-
-        <hr style="margin: 20px 0; border: 1px solid #9b59b6;">
-
-        <h3>Depoimento de Cliente</h3>
-        <p style="font-style: italic; color: #aaa;">"O trabalho foi além das minhas expectativas! Entregaram antes do prazo e captaram exatamente o que eu queria para minha marca."</p>
-        <p style="text-align: right; color: #ccc;">- Ana Silva, CEO da NovaEra</p>
     </div>
 
     <div class="container">
