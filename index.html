@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design de Logos Profissionais</title>
+    <title>Professional Logo Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
         }
         header {
             background: linear-gradient(90deg, #ff6f00, #ffa000);
@@ -33,6 +33,7 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             text-align: center;
+            flex-grow: 1;
         }
         h1, h2 {
             font-family: 'Oswald', sans-serif;
@@ -120,28 +121,15 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border: 2px solid #ffa000;
+            position: fixed;
         }
         .sidebar-left {
-            margin: 20px;
+            top: 20px;
+            left: 20px;
         }
         .sidebar-right {
-            margin: 20px;
-        }
-        @media (min-width: 1200px) {
-            body {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .sidebar-left {
-                position: fixed;
-                top: 60px;
-                left: 20px;
-            }
-            .sidebar-right {
-                position: fixed;
-                top: 100px;
-                right: 20px;
-            }
+            top: 100px;
+            right: 20px;
         }
         .sidebar-right form {
             display: flex;
@@ -162,11 +150,10 @@
             color: white;
             cursor: pointer;
             font-weight: bold;
-            transition: background 0.3s ease, transform 0.3s ease;
+            transition: background 0.3s ease;
         }
         .sidebar-right button:hover {
             background: #e65100;
-            transform: scale(1.05);
         }
         #voltarAoTopo {
             position: fixed;
@@ -225,36 +212,59 @@
             font-size: 16px;
             line-height: 1.6;
         }
+        .extra-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        .extra-section h2 {
+            font-family: 'Oswald', sans-serif;
+            color: #ff6f00;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .extra-section p {
+            font-size: 18px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
-    <header>Design de Logos Profissionais</header>
-
+    <header>Professional Logo Design</header>
     <div class="sidebar-left">
-        <h3>Prazos de Entrega</h3>
-        <p>Design Simples: 1-3 dias úteis</p>
-        <p>Design Completo: 3-5 dias úteis</p>
-        <p>Pacotes Personalizados: Sob consulta</p>
+        <h3>Delivery Times</h3>
+        <p>Simple Design: 1-3 business days</p>
+        <p>Complete Design: 3-5 business days</p>
+        <p>Custom Packages: On request</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <h3>Depoimentos de Clientes</h3>
+        <h3>Client Feedback</h3>
         <p style="font-style: italic; color: #666;">"Fiquei muito satisfeito com o serviço! O logotipo superou as minhas expectativas. Recomendo a todos que procuram qualidade e rapidez!"</p>
         <p style="font-weight: bold; color: #ff6f00;">- João Silva</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <p style="font-style: italic; color: #666;">"Serviço excelente! Captaram exatamente o que eu queria para a identidade da minha marca. Equipe muito profissional."</p>
+        <p style="font-style: italic; color: #666;">"Serviço excelente! Captaram exatamente o que eu queria para a identidade da minha marca. Equipa muito profissional."</p>
         <p style="font-weight: bold; color: #ff6f00;">- Ana Pereira</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <h3>Nossos Diferenciais</h3>
+        <p style="font-style: italic; color: #666;">"O processo foi super simples e o resultado ficou incrível! Voltarei a contratar com certeza."</p>
+        <p style="font-weight: bold; color: #ff6f00;">- Carlos Mendes</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <p style="font-style: italic; color: #666;">"Atendimento excelente e design fora de série! O meu logo ficou perfeito para a minha empresa."</p>
+        <p style="font-weight: bold; color: #ff6f00;">- Marta Almeida</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <h3>Our Qualities</h3>
         <ul style="list-style-type: none; padding-left: 0; color: #555; font-size: 16px;">
             <li>✅ Pontualidade</li>
             <li>✅ Criatividade</li>
             <li>✅ Design Exclusivo</li>
         </ul>
     </div>
-
     <div class="container">
-        <h1>Faça sua marca se destacar</h1>
-        <p>Criamos logotipos modernos e exclusivos para empresas que desejam se destacar no mercado.</p>
-        <h2>Nossos Projetos</h2>
+        <h1>Make your brand stand out</h1>
+        <p>We create modern and exclusive logos for businesses that want to stand out in the market.</p>
+        <h2>Our Projects</h2>
         <div class="logos">
             <img src="logotipo_tecnova.png.webp" alt="TechNova Logo">
             <img src="logotipo_elegance.png.webp" alt="Elegance Logo">
@@ -265,32 +275,30 @@
             <img src="logotipo_zenith.png.webp" alt="Zenith Logo">
         </div>
         <div class="contact">
-            <p>Entre em contato para um design exclusivo:</p>
-            <a href="mailto:diogolourencomc@gmail.com">Solicitar Orçamento</a>
+            <p>Get in touch for an exclusive design:</p>
+            <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
         </div>
     </div>
-
     <div class="sidebar-right">
-        <h3>Personalize seu Design</h3>
+        <h3>Customize Your Design</h3>
         <form action="#" method="post">
-            <label for="name">Seu Nome:</label>
+            <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
-            <label for="email">Seu Email:</label>
+            <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="style">Estilo do Logo:</label>
+            <label for="style">Logo Style:</label>
             <select id="style" name="style">
-                <option value="moderno">Moderno</option>
-                <option value="minimalista">Minimalista</option>
-                <option value="clássico">Clássico</option>
+                <option value="modern">Modern</option>
+                <option value="minimalist">Minimalist</option>
+                <option value="classic">Classic</option>
             </select>
-            <label for="budget">Orçamento (R$):</label>
+            <label for="budget">Budget (€):</label>
             <input type="number" id="budget" name="budget" min="30" max="10000">
-            <label for="notes">Notas Adicionais:</label>
-            <textarea id="notes" name="notes" rows="4" placeholder="Conte-nos mais sobre o que deseja para o seu logo..."></textarea>
-            <button type="submit">Solicitar Orçamento</button>
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about what you want for your logo..."></textarea>
+            <button type="submit">Request a Quote</button>
         </form>
     </div>
-
     <section class="faq-section">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
@@ -299,22 +307,31 @@
         </div>
         <div class="faq-item">
             <h4>Posso solicitar revisões após a entrega?</h4>
-            <p>Sim! Incluímos até 3 revisões sem custo adicional em todos os pacotes. Revisões extras podem ser combinadas conforme a necessidade.</p>
+            <p>Sim! Incluímos até 3 revisões sem custo adicional em todos os pacotes. Revisões extras podem ser combinadas de acordo com a sua necessidade.</p>
         </div>
         <div class="faq-item">
             <h4>Qual é o formato de entrega dos arquivos?</h4>
             <p>Entregamos o logo em formatos de alta resolução, incluindo PNG, SVG e PDF. Outros formatos podem ser solicitados.</p>
         </div>
         <div class="faq-item">
-            <h4>Vocês criam logotipos para qualquer segmento?</h4>
-            <p>Sim! Atendemos empresas de todos os segmentos, criando designs personalizados que se adequam à identidade e ao público-alvo de cada cliente.</p>
+            <h4>Vocês criam logotipos para qualquer segmento de negócio?</h4>
+            <p>Sim! Atendemos empresas de todos os segmentos, criando designs personalizados que se adequam à identidade e público-alvo de cada cliente.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Posso solicitar um logotipo em várias versões de cor?</h4>
+            <p>Sim! Oferecemos versões em diferentes paletas de cores para que o logo se adapte a diversos usos e contextos.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Vocês oferecem serviços adicionais, como cartões de visita ou branding completo?</h4>
+            <p>Sim! Além dos logotipos, oferecemos pacotes completos de identidade visual, incluindo cartões de visita, papelaria e branding para redes sociais.</p>
         </div>
     </section>
-
-    <footer>© 2025 Design de Logos. Todos os direitos reservados.</footer>
-
-    <button id="voltarAoTopo" title="Voltar ao Topo">↑</button>
-
+    <section class="extra-section">
+        <h2>O Que Nos Torna Únicos?</h2>
+        <p>Nossa equipe combina criatividade, técnica e paixão para criar identidades visuais que destacam a sua marca no mercado. Cada logotipo é desenvolvido com exclusividade e atenção aos detalhes, garantindo um design que transmite a verdadeira essência do seu negócio.</p>
+    </section>
+    <footer>© 2025 Design Logos. All rights reserved.</footer>
+    <button id="voltarAoTopo" title="Back to Top">↑</button>
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
         window.addEventListener('scroll', () => {
@@ -333,3 +350,4 @@
     </script>
 </body>
 </html>
+
