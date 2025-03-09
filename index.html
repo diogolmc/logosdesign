@@ -124,7 +124,7 @@
             position: fixed;
         }
         .sidebar-left {
-            top: 60px;
+            top: 40px;
             left: 20px;
         }
         .sidebar-right {
@@ -198,19 +198,35 @@
             text-align: center;
             margin-bottom: 30px;
         }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h4 {
-            font-family: 'Oswald', sans-serif;
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-        .faq-item p {
-            color: #555;
+        .accordion {
+            background-color: #ff6f00;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
             font-size: 16px;
-            line-height: 1.6;
+            font-family: 'Oswald', sans-serif;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .accordion:hover {
+            background-color: #e65100;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            border-radius: 0 0 8px 8px;
+        }
+        .panel p {
+            margin: 15px 0;
+            color: #555;
         }
     </style>
 </head>
@@ -277,20 +293,40 @@
     <section class="faq-section">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
-            <h4>Qual é o prazo para entrega do logo?</h4>
-            <p>O prazo depende do pacote escolhido. Designs simples levam de 1 a 3 dias úteis, enquanto designs completos podem levar de 3 a 5 dias úteis.</p>
+            <button class="accordion">Qual é o prazo para entrega do logo?</button>
+            <div class="panel">
+                <p>O prazo depende do pacote escolhido. Designs simples levam de 1 a 3 dias úteis, enquanto designs completos podem levar de 3 a 5 dias úteis.</p>
+            </div>
         </div>
         <div class="faq-item">
-            <h4>Posso solicitar revisões após a entrega?</h4>
-            <p>Sim! Incluímos até 3 revisões sem custo adicional em todos os pacotes. Revisões extras podem ser combinadas de acordo com a sua necessidade.</p>
+            <button class="accordion">Posso solicitar revisões após a entrega?</button>
+            <div class="panel">
+                <p>Sim! Incluímos até 3 revisões sem custo adicional em todos os pacotes. Revisões extras podem ser combinadas de acordo com a sua necessidade.</p>
+            </div>
         </div>
         <div class="faq-item">
-            <h4>Qual é o formato de entrega dos arquivos?</h4>
-            <p>Entregamos o logo em formatos de alta resolução, incluindo PNG, SVG e PDF. Outros formatos podem ser solicitados.</p>
+            <button class="accordion">Qual é o formato de entrega dos arquivos?</button>
+            <div class="panel">
+                <p>Entregamos o logo em formatos de alta resolução, incluindo PNG, SVG e PDF. Outros formatos podem ser solicitados.</p>
+            </div>
         </div>
         <div class="faq-item">
-            <h4>Vocês criam logotipos para qualquer segmento de negócio?</h4>
-            <p>Sim! Atendemos empresas de todos os segmentos, criando designs personalizados que se adequam à identidade e público-alvo de cada cliente.</p>
+            <button class="accordion">Vocês criam logotipos para qualquer segmento de negócio?</button>
+            <div class="panel">
+                <p>Sim! Atendemos empresas de todos os segmentos, criando designs personalizados que se adequam à identidade e público-alvo de cada cliente.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion">Os direitos autorais do logo são meus após a compra?</button>
+            <div class="panel">
+                <p>Sim! Após a finalização e entrega do projeto, todos os direitos autorais do logotipo serão transferidos para você. Você terá total liberdade para utilizá-lo onde quiser.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion">Vocês oferecem suporte após a entrega do projeto?</button>
+            <div class="panel">
+                <p>Claro! Oferecemos suporte gratuito por 15 dias após a entrega para ajustes simples ou dúvidas. Para serviços adicionais ou suporte estendido, consulte nossos pacotes personalizados.</p>
+            </div>
         </div>
     </section>
     <footer>© 2025 Design Logos. All rights reserved.</footer>
@@ -310,6 +346,19 @@
                 behavior: 'smooth'
             });
         });
+
+        const acc = document.getElementsByClassName("accordion");
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 </body>
 </html>
