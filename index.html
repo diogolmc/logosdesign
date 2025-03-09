@@ -65,6 +65,51 @@
             background: #007BFF;
             color: white;
         }
+        .quote-form {
+    margin-top: 40px;
+    background-color: #0f3460;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.quote-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quote-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.quote-form button {
+    background: #00d4ff;
+    color: #16213e;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quote-form button:hover {
+    background: #007BFF;
+    color: white;
+}
+
     </style>
 </head>
 <body>
@@ -90,6 +135,21 @@
         <div class="contact">
             <p>Entre em contato para um design exclusivo:</p>
             <a href="mailto:diogolourencomc@gmail.com">Solicitar um Logotipo</a>
+            <div class="quote-form">
+    <h2>Peça um Orçamento Personalizado</h2>
+    <form action="mailto:diogolourencomc@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Nome" placeholder="Seu nome" required>
+        <input type="email" name="Email" placeholder="Seu email" required>
+        <select name="Tipo de Logotipo" required>
+            <option value="">Escolha o tipo de logotipo</option>
+            <option value="Simples">Simples</option>
+            <option value="Moderno">Moderno</option>
+            <option value="Premium">Premium</option>
+        </select>
+        <textarea name="Descrição" placeholder="Descreva sua ideia..." rows="5" required></textarea>
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</div>
         </div>
     </div>
 </body>
