@@ -8,13 +8,20 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #f5f5f5 0%, #e0e0e0 100%);
-            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: space-between;
+            background: linear-gradient(to right, #f5f5f5 0%, #e0e0e0 100%);
+            color: #333;
+            transition: background 0.5s ease, color 0.5s ease;
         }
+
+        body.dark-theme {
+            background: linear-gradient(to right, #1e1e1e 0%, #121212 100%);
+            color: #ddd;
+        }
+
         header {
             background: linear-gradient(90deg, #ff6f00, #ffa000);
             color: white;
@@ -24,7 +31,33 @@
             font-weight: 700;
             letter-spacing: 1px;
             width: 100%;
+            position: relative;
+            transition: background 0.5s ease;
         }
+
+        body.dark-theme header {
+            background: linear-gradient(90deg, #333, #555);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: #fff;
+            color: #ff6f00;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-theme .theme-toggle {
+            background: #333;
+            color: #fff;
+        }
+
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -34,7 +67,13 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             text-align: center;
             flex-grow: 1;
+            transition: background 0.5s ease;
         }
+
+        body.dark-theme .container {
+            background: #222;
+        }
+
         h1, h2 {
             font-family: 'Oswald', sans-serif;
             font-weight: 600;
@@ -42,153 +81,88 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
+
+        body.dark-theme h1, 
+        body.dark-theme h2 {
+            color: #ffa000;
         }
-        h2 {
-            font-size: 30px;
-            margin-top: 40px;
-        }
+
         p {
             font-size: 18px;
             line-height: 1.6;
             color: #555;
+            transition: color 0.5s ease;
         }
-        .logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .logos img {
-            width: 45%;
-            max-width: 300px;
-            border-radius: 12px;
-            border: 2px solid #ffa000;
-            background-color: #fafafa;
-            padding: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-        }
-        .logos img:nth-child(1) { animation-delay: 0.2s; }
-        .logos img:nth-child(2) { animation-delay: 0.4s; }
-        .logos img:nth-child(3) { animation-delay: 0.6s; }
-        .logos img:nth-child(4) { animation-delay: 0.8s; }
-        .logos img:nth-child(5) { animation-delay: 1s; }
 
-        .logos img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 111, 0, 0.5);
+        body.dark-theme p {
+            color: #bbb;
         }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .contact {
-            margin-top: 30px;
-            font-size: 20px;
-        }
-        .contact a {
-            display: inline-block;
-            background: #ff6f00;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .contact a:hover {
-            background: #e65100;
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-            width: 100%;
-        }
-        .sidebar-left, .sidebar-right {
-            width: 300px;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+        .logos img {
+            background-color: #fafafa;
             border: 2px solid #ffa000;
-            position: fixed;
-            top: 100px;
         }
-        .sidebar-left {
-            left: 20px;
+
+        body.dark-theme .logos img {
+            background-color: #333;
+            border: 2px solid #ffa000;
         }
-        .sidebar-right {
-            right: 20px;
+
+        /* Sidebars */
+        .sidebar-left, .sidebar-right {
+            background: #ffffff;
+            transition: background 0.5s ease;
         }
-        .sidebar-right form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+
+        body.dark-theme .sidebar-left,
+        body.dark-theme .sidebar-right {
+            background: #222;
         }
+
+        /* Form fields */
         .sidebar-right input,
         .sidebar-right select,
-        .sidebar-right textarea,
-        .sidebar-right button {
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 14px;
+        .sidebar-right textarea {
+            background: #fff;
+            color: #333;
         }
-        .sidebar-right button {
-            background: #ff6f00;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
+
+        body.dark-theme .sidebar-right input,
+        body.dark-theme .sidebar-right select,
+        body.dark-theme .sidebar-right textarea {
+            background: #333;
+            color: #ddd;
         }
-        .sidebar-right button:hover {
-            background: #e65100;
+
+        /* Footer */
+        footer {
+            color: #777;
+            background: #fff;
+            transition: background 0.5s ease;
+        }
+
+        body.dark-theme footer {
+            background: #121212;
+            color: #888;
         }
 
         /* Botão Voltar ao Topo */
         #voltarAoTopo {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
             background-color: #ff6f00;
             color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease, transform 0.3s ease;
-            z-index: 1000;
         }
 
-        #voltarAoTopo.show {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
+        body.dark-theme #voltarAoTopo {
+            background-color: #555;
         }
 
-        #voltarAoTopo:hover {
-            background-color: #e65100;
-            transform: scale(1.1);
-        }
     </style>
 </head>
 <body>
-    <header>Professional Logo Design</header>
+    <header>
+        Professional Logo Design
+        <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
 
     <div class="sidebar-left">
         <h3>Delivery Times</h3>
@@ -275,7 +249,10 @@
 
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
 
+        // Voltar ao Topo
         window.addEventListener('scroll', () => {
             if (window.scrollY > 200) {
                 voltarAoTopo.classList.add('show');
@@ -290,6 +267,13 @@
                 behavior: 'smooth'
             });
         });
+
+        // Toggle Tema
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            themeToggle.textContent = body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+        });
     </script>
 </body>
 </html>
+
