@@ -124,7 +124,7 @@
             position: fixed;
         }
         .sidebar-left {
-            top: 40px;
+            top: 20px;
             left: 20px;
         }
         .sidebar-right {
@@ -228,137 +228,79 @@
             margin: 15px 0;
             color: #555;
         }
+        .why-choose-us {
+            max-width: 1000px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        .why-choose-us h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            color: #ff6f00;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature-item {
+            flex: 1 1 250px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 111, 0, 0.2);
+        }
+        .feature-item img {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-item p {
+            color: #555;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <header>Professional Logo Design</header>
-    <div class="sidebar-left">
-        <h3>Delivery Times</h3>
-        <p>Simple Design: 1-3 business days</p>
-        <p>Complete Design: 3-5 business days</p>
-        <p>Custom Packages: On request</p>
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <h3>Client Feedback</h3>
-        <p style="font-style: italic; color: #666;">"Fiquei muito satisfeito com o serviço! O logotipo superou as minhas expectativas. Recomendo a todos que procuram qualidade e rapidez!"</p>
-        <p style="font-weight: bold; color: #ff6f00;">- João Silva</p>
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <p style="font-style: italic; color: #666;">"Serviço excelente! Captaram exatamente o que eu queria para a identidade da minha marca. Equipa muito profissional."</p>
-        <p style="font-weight: bold; color: #ff6f00;">- Ana Pereira</p>
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <h3>Our Qualities</h3>
-        <ul style="list-style-type: none; padding-left: 0; color: #555; font-size: 16px;">
-            <li>✅ Pontualidade</li>
-            <li>✅ Criatividade</li>
-            <li>✅ Design Exclusivo</li>
-        </ul>
-    </div>
-    <div class="container">
-        <h1>Make your brand stand out</h1>
-        <p>We create modern and exclusive logos for businesses that want to stand out in the market.</p>
-        <h2>Our Projects</h2>
-        <div class="logos">
-            <img src="logotipo_tecnova.png.webp" alt="TechNova Logo">
-            <img src="logotipo_elegance.png.webp" alt="Elegance Logo">
-            <img src="logotipo_inovare.png.webp" alt="Inovare Logo">
-            <img src="logotipo_creativehub.png.webp" alt="CreativeHub Logo">
-            <img src="logotipo_nextgen.png.webp" alt="NextGen Logo">
-            <img src="logotipo_vortex.png.webp" alt="Vortex Logo">
-            <img src="logotipo_zenith.png.webp" alt="Zenith Logo">
-        </div>
-        <div class="contact">
-            <p>Get in touch for an exclusive design:</p>
-            <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
-        </div>
-    </div>
-    <div class="sidebar-right">
-        <h3>Customize Your Design</h3>
-        <form action="#" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="style">Logo Style:</label>
-            <select id="style" name="style">
-                <option value="modern">Modern</option>
-                <option value="minimalist">Minimalist</option>
-                <option value="classic">Classic</option>
-            </select>
-            <label for="budget">Budget (€):</label>
-            <input type="number" id="budget" name="budget" min="30" max="10000">
-            <label for="notes">Additional Notes:</label>
-            <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about what you want for your logo..."></textarea>
-            <button type="submit">Request a Quote</button>
-        </form>
-    </div>
-    <section class="faq-section">
-        <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <button class="accordion">Qual é o prazo para entrega do logo?</button>
-            <div class="panel">
-                <p>O prazo depende do pacote escolhido. Designs simples levam de 1 a 3 dias úteis, enquanto designs completos podem levar de 3 a 5 dias úteis.</p>
+    <!-- existing content... -->
+
+    <section class="why-choose-us">
+        <h2>O Que Nos Torna Únicos</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="icone_pontualidade.png" alt="Pontualidade" />
+                <h3>Pontualidade</h3>
+                <p>Garantimos entrega rápida e dentro do prazo, sem comprometer a qualidade.</p>
             </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion">Posso solicitar revisões após a entrega?</button>
-            <div class="panel">
-                <p>Sim! Incluímos até 3 revisões sem custo adicional em todos os pacotes. Revisões extras podem ser combinadas de acordo com a sua necessidade.</p>
+            <div class="feature-item">
+                <img src="icone_criatividade.png" alt="Criatividade" />
+                <h3>Criatividade</h3>
+                <p>Designs originais e personalizados que refletem a identidade da sua marca.</p>
             </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion">Qual é o formato de entrega dos arquivos?</button>
-            <div class="panel">
-                <p>Entregamos o logo em formatos de alta resolução, incluindo PNG, SVG e PDF. Outros formatos podem ser solicitados.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion">Vocês criam logotipos para qualquer segmento de negócio?</button>
-            <div class="panel">
-                <p>Sim! Atendemos empresas de todos os segmentos, criando designs personalizados que se adequam à identidade e público-alvo de cada cliente.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion">Os direitos autorais do logo são meus após a compra?</button>
-            <div class="panel">
-                <p>Sim! Após a finalização e entrega do projeto, todos os direitos autorais do logotipo serão transferidos para você. Você terá total liberdade para utilizá-lo onde quiser.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion">Vocês oferecem suporte após a entrega do projeto?</button>
-            <div class="panel">
-                <p>Claro! Oferecemos suporte gratuito por 15 dias após a entrega para ajustes simples ou dúvidas. Para serviços adicionais ou suporte estendido, consulte nossos pacotes personalizados.</p>
+            <div class="feature-item">
+                <img src="icone_exclusividade.png" alt="Design Exclusivo" />
+                <h3>Design Exclusivo</h3>
+                <p>Cada logotipo é criado sob medida, garantindo exclusividade total para seu negócio.</p>
             </div>
         </div>
     </section>
-    <footer>© 2025 Design Logos. All rights reserved.</footer>
-    <button id="voltarAoTopo" title="Back to Top">↑</button>
-    <script>
-        const voltarAoTopo = document.getElementById('voltarAoTopo');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                voltarAoTopo.classList.add('show');
-            } else {
-                voltarAoTopo.classList.remove('show');
-            }
-        });
-        voltarAoTopo.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
 
-        const acc = document.getElementsByClassName("accordion");
-        for (let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
+    <!-- footer and scripts... -->
 </body>
 </html>
