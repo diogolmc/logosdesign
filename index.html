@@ -22,9 +22,21 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
-        .container {
-            max-width: 1000px;
+        .main-container {
+            max-width: 1200px;
             margin: 40px auto;
+            display: flex;
+            gap: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background: rgba(22, 33, 62, 0.95);
+            padding: 30px;
+            border-radius: 16px;
+            border: 2px solid #9b59b6;
+        }
+        .container {
+            flex: 2;
             background: rgba(22, 33, 62, 0.95);
             padding: 50px 40px;
             border-radius: 16px;
@@ -32,7 +44,7 @@
             text-align: center;
             border: 2px solid #9b59b6;
         }
-        h1, h2 {
+        h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
             color: #9b59b6;
@@ -46,6 +58,10 @@
         h2 {
             font-size: 28px;
             margin-top: 40px;
+        }
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
         }
         p {
             font-size: 18px;
@@ -85,6 +101,7 @@
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
         }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -111,6 +128,33 @@
             color: white;
             transform: scale(1.05);
         }
+
+        /* Formulário Personalização */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+        button {
+            background-color: #9b59b6;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -121,26 +165,65 @@
 </head>
 <body>
     <header>Design de Logotipos Profissionais</header>
-    <div class="container">
-        <h1>Transforme sua marca com um design único</h1>
-        <p>Criação de logotipos modernos e exclusivos para empresas que querem se destacar.</p>
 
-        <h2>Nossos Trabalhos</h2>
-        <div class="logos">
-            <img src="logotipo_tecnova.png.webp" alt="Logotipo TechNova">
-            <img src="logotipo_elegance.png.webp" alt="Logotipo Elegance">
-            <img src="logotipo_inovare.png.webp" alt="Logotipo Inovare">
-            <img src="logotipo_creativehub.png.webp" alt="Logotipo CreativeHub">
-            <img src="logotipo_nextgen.png.webp" alt="Logotipo NextGen">
-            <img src="logotipo_vortex.png.webp" alt="Logotipo Vortex">
-            <img src="logotipo_zenith.png.webp" alt="Logotipo Zenith">
+    <div class="main-container">
+        
+        <!-- Sidebar Esquerda - Prazos de Entrega -->
+        <div class="sidebar">
+            <h3>Prazos de Entrega</h3>
+            <p><strong>Primeira Proposta:</strong> 3 a 5 dias úteis</p>
+            <p><strong>Ajustes e Revisões:</strong> 1 a 2 dias úteis por revisão</p>
+            <p><strong>Entrega Final:</strong> até 7 dias úteis após aprovação</p>
+            <p>Nosso compromisso é com qualidade e agilidade. Oferecemos um cronograma eficiente para garantir um serviço profissional.</p>
         </div>
 
-        <div class="contact">
-            <p>Entre em contato para um design exclusivo:</p>
-            <a href="mailto:diogolourencomc@gmail.com">Solicitar um Logotipo</a>
+        <!-- Conteúdo Central -->
+        <div class="container">
+            <h1>Transforme sua marca com um design único</h1>
+            <p>Criação de logotipos modernos e exclusivos para empresas que querem se destacar.</p>
+
+            <h2>Nossos Trabalhos</h2>
+            <div class="logos">
+                <img src="logotipo_tecnova.png.webp" alt="Logotipo TechNova">
+                <img src="logotipo_elegance.png.webp" alt="Logotipo Elegance">
+                <img src="logotipo_inovare.png.webp" alt="Logotipo Inovare">
+                <img src="logotipo_creativehub.png.webp" alt="Logotipo CreativeHub">
+                <img src="logotipo_nextgen.png.webp" alt="Logotipo NextGen">
+                <img src="logotipo_vortex.png.webp" alt="Logotipo Vortex">
+                <img src="logotipo_zenith.png.webp" alt="Logotipo Zenith">
+            </div>
+
+            <div class="contact">
+                <p>Entre em contato para um design exclusivo:</p>
+                <a href="mailto:diogolourencomc@gmail.com">Solicitar um Logotipo</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Direita - Personalização -->
+        <div class="sidebar">
+            <h3>Personalize seu Design</h3>
+            <form action="#" method="post">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="estilo">Estilo do Logotipo:</label>
+                <select id="estilo" name="estilo">
+                    <option value="moderno">Moderno</option>
+                    <option value="minimalista">Minimalista</option>
+                    <option value="clássico">Clássico</option>
+                </select>
+
+                <label for="orcamento">Orçamento (€):</label>
+                <input type="number" id="orcamento" name="orcamento" min="50" max="10000">
+
+                <button type="submit">Solicitar Orçamento</button>
+            </form>
         </div>
     </div>
+
     <footer>© 2025 Design Logos. Todos os direitos reservados.</footer>
 </body>
 </html>
