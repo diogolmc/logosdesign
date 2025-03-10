@@ -114,7 +114,7 @@
             font-size: 14px;
             width: 100%;
         }
-        .sidebar-left, .sidebar-right {
+        .sidebar-left {
             width: 300px;
             background: #ffffff;
             padding: 20px;
@@ -122,12 +122,18 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border: 2px solid #ffa000;
             position: fixed;
-        }
-        .sidebar-left {
             top: 10px;
             left: 20px;
         }
         .sidebar-right {
+            display: none;
+            width: 300px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 2px solid #ffa000;
+            position: fixed;
             top: 100px;
             right: 20px;
         }
@@ -212,37 +218,6 @@
             font-size: 16px;
             line-height: 1.6;
         }
-        .reviews-section {
-            max-width: 1000px;
-            margin: 60px auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            text-align: center;
-        }
-        .reviews-section h2 {
-            font-family: 'Oswald', sans-serif;
-            color: #ff6f00;
-            text-transform: uppercase;
-            font-size: 30px;
-            margin-bottom: 30px;
-        }
-        .review-item {
-            margin-bottom: 20px;
-        }
-        .review-item p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.6;
-            font-style: italic;
-        }
-        .review-item span {
-            display: block;
-            margin-top: 8px;
-            font-weight: bold;
-            color: #ff6f00;
-        }
         .cta-section {
             max-width: 1000px;
             margin: 60px auto;
@@ -286,14 +261,10 @@
         <p>Complete Design: 3-5 business days</p>
         <p>Custom Packages: On request</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <h3>Client Feedback</h3>
-        <p style="font-style: italic; color: #666;">"Fiquei muito satisfeito com o serviço! O logotipo superou as minhas expectativas. Recomendo a todos que procuram qualidade e rapidez!"</p>
-        <p style="font-weight: bold; color: #ff6f00;">- João Silva</p>
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <button onclick="toggleSidebar()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Solicitar Orçamento</button>
     </div>
     <div class="container">
-        <h1>Make your brand stand out</h1>
-        <p>We create modern and exclusive logos for businesses that want to stand out in the market.</p>
+        <h1>Transform your brand with a custom logo that makes your business unforgettable.</h1>
         <h2>Our Projects</h2>
         <div class="logos">
             <img src="logotipo_tecnova.png.webp" alt="TechNova Logo">
@@ -305,11 +276,11 @@
             <img src="logotipo_zenith.png.webp" alt="Zenith Logo">
         </div>
         <div class="contact">
-            <p>Get in touch for an exclusive design:</p>
+            <p>Ready to elevate your brand? Contact us now for your exclusive logo!</p>
             <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
         </div>
     </div>
-    <div class="sidebar-right">
+    <div class="sidebar-right" id="sidebarForm">
         <h3>Customize Your Design</h3>
         <form action="#" method="post">
             <label for="name">Your Name:</label>
@@ -344,38 +315,17 @@
             <p>Fornecemos os arquivos em formatos profissionais, incluindo PNG, JPEG, PDF e vetor (AI ou SVG), prontos para qualquer utilização.</p>
         </div>
     </section>
-    <section class="reviews-section">
-        <h2>O que dizem os nossos clientes</h2>
-        <div class="review-item">
-            <p>"Atendimento excelente e design fora de série! O meu logo ficou perfeito para a minha empresa."</p>
-            <span>- Marta Almeida</span>
-        </div>
-        <div class="review-item">
-            <p>"O processo foi super simples e o resultado ficou incrível! Voltarei a contratar com certeza."</p>
-            <span>- Carlos Mendes</span>
-        </div>
-        <div class="review-item">
-            <p>"Serviço excelente! Captaram exatamente o que eu queria para a identidade da minha marca. Equipa muito profissional."</p>
-            <span>- Ana Pereira</span>
-        </div>
-        <div class="review-item">
-            <p>"Excelente comunicação durante todo o processo! Adorámos o profissionalismo e a atenção aos detalhes."</p>
-            <span>- Pedro Gomes</span>
-        </div>
-        <div class="review-item">
-            <p>"Superou todas as expectativas! O logotipo captou na perfeição a essência da nossa marca."</p>
-            <span>- Sofia Carvalho</span>
-        </div>
-    </section>
     <section class="cta-section">
-        <h2>Pronto para criar a sua marca de sucesso?</h2>
-        <p>Entre em contato connosco e dê o primeiro passo para um logotipo profissional e exclusivo.</p>
-        <a href="mailto:diogolourencomc@gmail.com">Solicitar um Orçamento</a>
+        <h2>Sua marca merece um logo que impressiona!</h2>
+        <p>Clique no botão abaixo e comece agora mesmo o caminho para um design profissional e exclusivo.</p>
+        <a href="#" onclick="toggleSidebar()">Solicitar um Orçamento</a>
     </section>
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
+        const sidebarForm = document.getElementById('sidebarForm');
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 200) {
                 voltarAoTopo.classList.add('show');
@@ -383,12 +333,21 @@
                 voltarAoTopo.classList.remove('show');
             }
         });
+
         voltarAoTopo.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
+
+        function toggleSidebar() {
+            if (sidebarForm.style.display === 'block') {
+                sidebarForm.style.display = 'none';
+            } else {
+                sidebarForm.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
