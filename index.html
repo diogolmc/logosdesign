@@ -8,11 +8,10 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #f5f5f5 0%, #e0e0e0 100%);
+            background: linear-gradient(to right, #fdfbfb, #ebedee);
             color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
         }
         header {
             background: linear-gradient(90deg, #ff6f00, #ffa000);
@@ -22,18 +21,14 @@
             text-align: center;
             font-weight: 700;
             letter-spacing: 1px;
-            width: 100%;
         }
-        .container {
-            width: calc(100% - 360px);
-            max-width: none;
-            margin-left: 340px;
+        .container, .faq-section {
+            max-width: 1200px;
+            margin: 40px auto;
             background: #ffffff;
             padding: 50px 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            flex-grow: 1;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
             font-family: 'Oswald', sans-serif;
@@ -43,12 +38,13 @@
             letter-spacing: 1px;
         }
         h1 {
-            font-size: 40px;
+            font-size: 42px;
             margin-bottom: 20px;
         }
         h2 {
-            font-size: 30px;
+            font-size: 32px;
             margin-top: 40px;
+            text-align: center;
         }
         p {
             font-size: 18px;
@@ -63,34 +59,20 @@
             margin-top: 20px;
         }
         .logos img {
-            width: 45%;
-            max-width: 300px;
+            width: 300px;
             border-radius: 12px;
             border: 2px solid #ffa000;
             background-color: #fafafa;
             padding: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .logos img:nth-child(1) { animation-delay: 0.2s; }
-        .logos img:nth-child(2) { animation-delay: 0.4s; }
-        .logos img:nth-child(3) { animation-delay: 0.6s; }
-        .logos img:nth-child(4) { animation-delay: 0.8s; }
-        .logos img:nth-child(5) { animation-delay: 1s; }
         .logos img:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(255, 111, 0, 0.5);
         }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
         .contact {
-            margin-top: 30px;
-            font-size: 20px;
+            margin-top: 40px;
+            text-align: center;
         }
         .contact a {
             display: inline-block;
@@ -112,54 +94,21 @@
             padding: 20px;
             color: #777;
             font-size: 14px;
-            width: 100%;
         }
         .sidebar-left {
             width: 300px;
             background: #ffffff;
             padding: 20px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             border: 2px solid #ffa000;
             position: fixed;
-            top: 10px;
+            top: 20px;
             left: 20px;
         }
-        .sidebar-right {
-            display: none;
-            width: 100%;
-            max-width: 600px;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            border: 2px solid #ffa000;
-            margin: 40px auto;
-            position: relative;
-        }
-        .sidebar-right form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .sidebar-right input,
-        .sidebar-right select,
-        .sidebar-right textarea,
-        .sidebar-right button {
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-        }
-        .sidebar-right button {
-            background: #ff6f00;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        .sidebar-right button:hover {
-            background: #e65100;
+        .sidebar-left ul {
+            list-style: none;
+            padding: 0;
         }
         #voltarAoTopo {
             position: fixed;
@@ -187,22 +136,7 @@
             background-color: #e65100;
             transform: scale(1.1);
         }
-        .faq-section {
-            width: calc(100% - 360px);
-            max-width: none;
-            margin-left: 340px;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            text-align: left;
-        }
         .faq-section h2 {
-            font-family: 'Oswald', sans-serif;
-            color: #ff6f00;
-            text-transform: uppercase;
-            font-size: 30px;
-            text-align: center;
             margin-bottom: 30px;
         }
         .faq-item {
@@ -229,17 +163,24 @@
         <p>Complete Design: 3-5 business days</p>
         <p>Custom Packages: On request</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <button onclick="toggleSidebar()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Solicitar Orçamento</button>
+        <button onclick="toggleSidebar()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; width:100%;">Solicitar Orçamento</button>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
         <h3>Fale Connosco</h3>
         <p>Email: <a href="mailto:diogolourencomc@gmail.com">diogolourencomc@gmail.com</a></p>
         <p>WhatsApp: +351 912 345 678</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
         <h3>Pagamentos Aceitos</h3>
-        <ul style="list-style: none; padding: 0;">
+        <ul>
             <li>✔️ MB Way</li>
             <li>✔️ Transferência Bancária</li>
             <li>✔️ PayPal</li>
+        </ul>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <h3>Características</h3>
+        <ul>
+            <li>✔️ Pontualidade</li>
+            <li>✔️ Criatividade</li>
+            <li>✔️ Design Exclusivo</li>
         </ul>
     </div>
     <div class="container">
@@ -259,58 +200,45 @@
             <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
         </div>
     </div>
-    <div class="sidebar-right" id="sidebarForm">
-        <h3>Customize Your Design</h3>
-        <form action="#" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="style">Logo Style:</label>
-            <select id="style" name="style">
-                <option value="modern">Modern</option>
-                <option value="minimalist">Minimalist</option>
-                <option value="classic">Classic</option>
-            </select>
-            <label for="budget">Budget (€):</label>
-            <input type="number" id="budget" name="budget" min="30" max="10000">
-            <label for="notes">Additional Notes:</label>
-            <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about what you want for your logo..."></textarea>
-            <button type="submit">Request a Quote</button>
-        </form>
-    </div>
     <section class="faq-section">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
             <h4>Qual é o prazo para entrega do logo?</h4>
-            <p>O prazo depende do pacote escolhido...</p>
+            <p>O prazo depende do pacote escolhido, geralmente entre 1 a 5 dias úteis.</p>
         </div>
         <div class="faq-item">
             <h4>Posso solicitar revisões após a entrega do logo?</h4>
-            <p>Sim! Incluímos revisões em todos os pacotes para garantir que o resultado final seja exatamente como deseja.</p>
+            <p>Sim! Incluímos revisões em todos os pacotes para garantir sua total satisfação.</p>
         </div>
         <div class="faq-item">
             <h4>Em que formatos receberei o meu logotipo?</h4>
-            <p>Fornecemos os arquivos em formatos profissionais, incluindo PNG, JPEG, PDF e vetor (AI ou SVG), prontos para qualquer utilização.</p>
+            <p>Fornecemos arquivos em PNG, JPEG, PDF e vetores (AI ou SVG).</p>
         </div>
         <div class="faq-item">
             <h4>Fornecem serviços de design além do logotipo?</h4>
-            <p>Sim! Oferecemos design de identidade visual completa, incluindo cartões de visita, papel timbrado e mais.</p>
+            <p>Sim! Oferecemos design de identidade visual completa, incluindo cartões e materiais de marca.</p>
         </div>
         <div class="faq-item">
             <h4>O logotipo é exclusivo e com direitos autorais?</h4>
-            <p>Todos os logotipos são criados de forma exclusiva para cada cliente, garantindo direitos autorais completos.</p>
+            <p>Sim, você terá exclusividade total e todos os direitos de uso comercial.</p>
         </div>
         <div class="faq-item">
             <h4>Quais métodos de pagamento aceitam?</h4>
-            <p>Aceitamos pagamentos via transferência bancária, MB Way, PayPal e cartões de crédito.</p>
+            <p>Aceitamos MB Way, Transferência Bancária, PayPal e Cartão de Crédito.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Posso pedir um logotipo urgente?</h4>
+            <p>Sim! Temos serviços de entrega expressa para necessidades urgentes.</p>
+        </div>
+        <div class="faq-item">
+            <h4>O que acontece se eu não gostar do design inicial?</h4>
+            <p>Realizamos ajustes conforme seu feedback para garantir o design perfeito para você.</p>
         </div>
     </section>
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
-        const sidebarForm = document.getElementById('sidebarForm');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 200) {
@@ -328,6 +256,9 @@
         });
 
         function toggleSidebar() {
+            const sidebarForm = document.getElementById('sidebarForm');
+            if (!sidebarForm) return;
+
             sidebarForm.style.display = (sidebarForm.style.display === 'block') ? 'none' : 'block';
             if (sidebarForm.style.display === 'block') {
                 sidebarForm.scrollIntoView({ behavior: 'smooth' });
