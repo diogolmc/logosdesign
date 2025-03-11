@@ -127,15 +127,15 @@
         }
         .sidebar-right {
             display: none;
-            width: 300px;
+            width: 100%;
+            max-width: 600px;
             background: #ffffff;
             padding: 20px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border: 2px solid #ffa000;
-            position: fixed;
-            top: 100px;
-            right: 20px;
+            margin: 40px auto;
+            position: relative;
         }
         .sidebar-right form {
             display: flex;
@@ -342,12 +342,12 @@
         });
 
         function toggleSidebar() {
+            sidebarForm.style.display = (sidebarForm.style.display === 'block') ? 'none' : 'block';
             if (sidebarForm.style.display === 'block') {
-                sidebarForm.style.display = 'none';
-            } else {
-                sidebarForm.style.display = 'block';
+                sidebarForm.scrollIntoView({ behavior: 'smooth' });
             }
         }
     </script>
 </body>
 </html>
+
