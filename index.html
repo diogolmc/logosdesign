@@ -1,4 +1,4 @@
-CTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,9 +17,9 @@ CTYPE html>
             background: linear-gradient(90deg, #ff6f00, #ffa000);
             color: white;
             padding: 20px;
-            padding-left: 320px; /*alinhamento com o conteudo */
+            padding-left: 280px; /* ajustado para alinhar com o conteudo */
             font-size: 32px;
-            text-align: center; /* alinhamento do texto */
+            text-align: left; /* ajustado */
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -30,7 +30,7 @@ CTYPE html>
             padding: 50px 40px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            margin-left: 320px;
+            margin-left: 300px; /* ligeiramente para a direita */
             margin-right: 40px;
         }
         h1, h2 {
@@ -43,6 +43,7 @@ CTYPE html>
         h1 {
             font-size: 42px;
             margin-bottom: 20px;
+            text-align: left; /* centralizado com base no conteúdo */
         }
         h2 {
             font-size: 32px;
@@ -160,6 +161,7 @@ CTYPE html>
 </head>
 <body>
     <header>Professional Logo Design</header>
+
     <div class="sidebar-left">
         <h3>Delivery Times</h3>
         <p>Simple Design: 1-3 business days</p>
@@ -186,6 +188,7 @@ CTYPE html>
             <li>✔️ Design Exclusivo</li>
         </ul>
     </div>
+
     <div class="container">
         <h1>Transform your brand with a custom logo that makes your business unforgettable.</h1>
         <h2>Our Projects</h2>
@@ -203,6 +206,7 @@ CTYPE html>
             <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
         </div>
     </div>
+
     <section class="faq-section">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
@@ -238,6 +242,7 @@ CTYPE html>
             <p>Realizamos ajustes conforme seu feedback para garantir o design perfeito para você.</p>
         </div>
     </section>
+
     <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; color: #ff6f00;">Solicitar Orçamento</h2>
         <form>
@@ -259,8 +264,10 @@ CTYPE html>
             <button type="submit" style="background-color:#ff6f00; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; width:100%;">Enviar Pedido</button>
         </form>
     </div>
+
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
+
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
 
@@ -273,16 +280,12 @@ CTYPE html>
         });
 
         voltarAoTopo.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         function toggleSidebar() {
             const sidebarForm = document.getElementById('sidebarForm');
             if (!sidebarForm) return;
-
             sidebarForm.style.display = (sidebarForm.style.display === 'block') ? 'none' : 'block';
             if (sidebarForm.style.display === 'block') {
                 sidebarForm.scrollIntoView({ behavior: 'smooth' });
