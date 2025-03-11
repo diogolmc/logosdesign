@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +17,11 @@
             background: linear-gradient(90deg, #ff6f00, #ffa000);
             color: white;
             padding: 20px;
+            padding-left: 320px; /*alinhamento com o conteudo */
             font-size: 32px;
-            text-align: left;
+            text-align: left; /* alinhamento do texto */
             font-weight: 700;
             letter-spacing: 1px;
-            padding-left: 400px;
         }
         .container, .faq-section, #sidebarForm {
             max-width: 1400px;
@@ -30,7 +30,7 @@
             padding: 50px 40px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            margin-left: 400px;
+            margin-left: 320px;
         }
         h1, h2 {
             font-family: 'Oswald', sans-serif;
@@ -185,7 +185,6 @@
             <li>✔️ Design Exclusivo</li>
         </ul>
     </div>
-
     <div class="container">
         <h1>Transform your brand with a custom logo that makes your business unforgettable.</h1>
         <h2>Our Projects</h2>
@@ -203,7 +202,6 @@
             <a href="mailto:diogolourencomc@gmail.com">Request a Logo</a>
         </div>
     </div>
-
     <section class="faq-section">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-item">
@@ -239,7 +237,6 @@
             <p>Realizamos ajustes conforme seu feedback para garantir o design perfeito para você.</p>
         </div>
     </section>
-
     <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; color: #ff6f00;">Solicitar Orçamento</h2>
         <form>
@@ -261,11 +258,8 @@
             <button type="submit" style="background-color:#ff6f00; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; width:100%;">Enviar Pedido</button>
         </form>
     </div>
-
     <footer>© 2025 Design Logos. All rights reserved.</footer>
-
     <button id="voltarAoTopo" title="Back to Top">↑</button>
-
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
 
@@ -287,6 +281,7 @@
         function toggleSidebar() {
             const sidebarForm = document.getElementById('sidebarForm');
             if (!sidebarForm) return;
+
             sidebarForm.style.display = (sidebarForm.style.display === 'block') ? 'none' : 'block';
             if (sidebarForm.style.display === 'block') {
                 sidebarForm.scrollIntoView({ behavior: 'smooth' });
@@ -295,4 +290,3 @@
     </script>
 </body>
 </html>
-
