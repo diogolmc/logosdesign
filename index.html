@@ -22,8 +22,8 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
-        .container, .faq-section {
-            max-width: 1200px;
+        .container, .faq-section, #sidebarForm {
+            max-width: 1400px;
             margin: 40px auto;
             background: #ffffff;
             padding: 50px 40px;
@@ -59,7 +59,7 @@
             margin-top: 20px;
         }
         .logos img {
-            width: 300px;
+            width: 320px;
             border-radius: 12px;
             border: 2px solid #ffa000;
             background-color: #fafafa;
@@ -96,7 +96,7 @@
             font-size: 14px;
         }
         .sidebar-left {
-            width: 300px;
+            width: 260px;
             background: #ffffff;
             padding: 20px;
             border-radius: 16px;
@@ -235,6 +235,27 @@
             <p>Realizamos ajustes conforme seu feedback para garantir o design perfeito para você.</p>
         </div>
     </section>
+    <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: #ff6f00;">Solicitar Orçamento</h2>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+
+            <label for="estilo">Estilo do Logotipo:</label><br>
+            <input type="text" id="estilo" name="estilo" placeholder="Ex: Moderno, Minimalista" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+
+            <label for="valor">Orçamento Disponível (€):</label><br>
+            <input type="number" id="valor" name="valor" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+
+            <label for="mensagem">Mensagem Adicional:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea><br>
+
+            <button type="submit" style="background-color:#ff6f00; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; width:100%;">Enviar Pedido</button>
+        </form>
+    </div>
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
     <script>
