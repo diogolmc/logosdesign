@@ -241,18 +241,18 @@
 
     <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; color: #ff6f00;">Solicitar Orçamento</h2>
-        <form>
+        <form onsubmit="return validarOrcamento()">
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+            <input type="text" id="nome" name="nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
 
             <label for="estilo">Estilo do Logotipo:</label><br>
-            <input type="text" id="estilo" name="estilo" placeholder="Ex: Moderno, Minimalista" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+            <input type="text" id="estilo" name="estilo" placeholder="Ex: Moderno, Minimalista" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
 
             <label for="valor">Orçamento Disponível (€):</label><br>
-            <input type="number" id="valor" name="valor" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"><br>
+            <input type="number" id="valor" name="valor" min="25" placeholder="Valor mínimo: 25€" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
 
             <label for="mensagem">Mensagem Adicional:</label><br>
             <textarea id="mensagem" name="mensagem" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea><br>
@@ -286,6 +286,16 @@
             if (sidebarForm.style.display === 'block') {
                 sidebarForm.scrollIntoView({ behavior: 'smooth' });
             }
+        }
+
+        function validarOrcamento() {
+            const valor = document.getElementById('valor').value;
+            if (valor < 25) {
+                alert('O orçamento mínimo é de 25€.');
+                return false;
+            }
+            alert('Pedido enviado com sucesso!');
+            return true;
         }
     </script>
 </body>
