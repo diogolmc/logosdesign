@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,20 +17,20 @@
             background: linear-gradient(90deg, #ff6f00, #ffa000);
             color: white;
             padding: 20px;
-            padding-left: 280px;
+            padding-left: 280px; /* ajustado para alinhar com o conteudo */
             font-size: 32px;
-            text-align: center;
+            text-align: center; /* ajustado */
             font-weight: 700;
             letter-spacing: 1px;
         }
-        .container, .faq-section, #sidebarForm, .testimonials-section {
+        .container, .faq-section, #sidebarForm {
             max-width: 1400px;
-            margin: 20px auto;
+            margin: 40px auto;
             background: #ffffff;
             padding: 50px 40px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            margin-left: 280px;
+            margin-left: 340px; /* ligeiramente para a direita */
             margin-right: 30px;
         }
         h1, h2 {
@@ -43,7 +43,7 @@
         h1 {
             font-size: 42px;
             margin-bottom: 20px;
-            text-align: left;
+            text-align: left; /* centralizado com base no conteúdo */
         }
         h2 {
             font-size: 32px;
@@ -106,10 +106,8 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             border: 2px solid #ffa000;
-            position: relative;
+            position: fixed;
             top: 100px;
-            overflow: visible;
-            max-height: none;
             left: 20px;
         }
         .sidebar-left ul {
@@ -142,50 +140,132 @@
             background-color: #e65100;
             transform: scale(1.1);
         }
-        .testimonial-slider {
-            display: flex;
-            overflow: hidden;
-            position: relative;
+        .faq-section h2 {
+            margin-bottom: 30px;
         }
-        .testimonial {
-            min-width: 100%;
-            transition: transform 0.5s ease;
-            padding: 20px;
-            box-sizing: border-box;
+        .faq-item {
+            margin-bottom: 20px;
         }
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        .faq-item h4 {
+            font-family: 'Oswald', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 20px;
         }
-        .slider-controls button {
-            background-color: #ffa000;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 0 10px;
+        .faq-item p {
+            color: #555;
             font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .slider-controls button:hover {
-            background-color: #ff6f00;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <header>Professional Logo Design</header>
 
-    <!-- Other content -->
+    <div class="sidebar-left">
+        <h3>Delivery Times</h3>
+        <p>Simple Design: 1-3 business days</p>
+        <p>Complete Design: 3-5 business days</p>
+        <p>Custom Packages: On request</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <button onclick="toggleSidebar()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; width:100%;">Request a Logo</button>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:diogolourencomc@gmail.com">diogolourencomc@gmail.com</a></p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <h3>Payments accepted</h3>
+        <ul>
+            <li>✔️ MB Way</li>
+            <li>✔️ Bank Transfer</li>
+            <li>✔️ PayPal</li>
+             <li>✔️ Skrill</li>
+        </ul>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
+        <h3>Features</h3>
+        <ul>
+            <li>✔️ Punctuality</li>
+            <li>✔️ Creativity</li>
+            <li>✔️ Exclusive Design</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Transform your brand with a custom logo that makes your business unforgettable.</h1>
+        <h2>Our Projects</h2>
+        <div class="logos">
+            <img src="logotipo_tecnova.png.webp" alt="TechNova Logo">
+            <img src="logotipo_elegance.png.webp" alt="Elegance Logo">
+            <img src="logotipo_inovare.png.webp" alt="Inovare Logo">
+            <img src="logotipo_creativehub.png.webp" alt="CreativeHub Logo">
+            <img src="logotipo_nextgen.png.webp" alt="NextGen Logo">
+            <img src="logotipo_vortex.png.webp" alt="Vortex Logo">
+            <img src="logotipo_zenith.png.webp" alt="Zenith Logo">
+        </div>
+    </div>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4>What is the deadline for delivery of the logo??</h4>
+            <p>The deadline depends on the package you choose, usually between 1 and 5 working days.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Can I request revisions after the logo has been delivered?</h4>
+            <p>Yes, we include revisions in all our packages to guarantee your complete satisfaction.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What formats will I receive my logo in?</h4>
+            <p>We supply files in PNG, JPEG, PDF and vectors (AI or SVG).</p>
+        </div>
+        <div class="faq-item">
+            <h4>Do you provide design services beyond the logo?</h4>
+            <p>Yes, we offer complete visual identity design, including cards and branding materials.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Is the logo exclusive and copyrighted?</h4>
+            <p>Yes, you will have total exclusivity and all commercial use rights.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What payment methods do you accept?</h4>
+            <p>We accept MB Way, Bank Transfer, PayPal and Skrill.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Can I request an urgent logo?</h4>
+            <p>Yes, we have express delivery services for urgent needs.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What happens if I don't like the initial design?</h4>
+            <p>We make adjustments according to your feedback to ensure the perfect design for you.</p>
+        </div>
+    </section>
+
+    <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: #ff6f00;">Request a Logo</h2>
+        <form onsubmit="return validarOrcamento()">
+            <label for="nome">Name:</label><br>
+            <input type="text" id="nome" name="nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
+
+            <label for="estilo">Logo style:</label><br>
+            <input type="text" id="estilo" name="estilo" placeholder="Ex: Modern, Minimalist" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
+
+            <label for="valor">Available budget (€):</label><br>
+            <input type="number" id="valor" name="valor" min="25" placeholder="Minimum amount: 25€" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
+
+            <label for="mensagem">Additional Message:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea><br>
+
+            <button type="submit" style="background-color:#ff6f00; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; width:100%;">Send Request</button>
+        </form>
+    </div>
 
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
 
     <script>
         const voltarAoTopo = document.getElementById('voltarAoTopo');
-        const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
-        let currentTestimonial = 0;
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 200) {
@@ -217,8 +297,7 @@
             alert('Pedido enviado com sucesso!');
             return true;
         }
-
-        function scrollToAvaliacoes() {
+          function scrollToAvaliacoes() {
             const avaliacoes = document.getElementById('avaliacoes');
             if (avaliacoes) {
                 avaliacoes.scrollIntoView({ behavior: 'smooth' });
@@ -245,4 +324,8 @@
         updateSlider();
     </script>
 </body>
-</html
+</html>
+
+    </script>
+</body>
+</html>
