@@ -190,6 +190,21 @@
             font-weight: bold;
             margin: 10px 0;
         }
+        .how-it-works {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 40px;
+        }
+        .how-it-works h2 {
+            margin-bottom: 30px;
+        }
+        .how-it-works ol {
+            list-style: decimal inside;
+            font-size: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -201,7 +216,12 @@
         <p>Complete Design: 3-5 business days</p>
         <p>Custom Packages: On request</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <button onclick="toggleSidebar()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; width:100%;">Request a Logo</button>
+        <button onclick="showOptions()" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; width:100%;">Request a Logo</button>
+        <div id="options" style="display:none; margin-top:10px;">
+            <button style="display:block; margin-bottom:10px; padding:10px; background-color:#ffa000; color:white; border:none; border-radius:8px; cursor:pointer;" onclick="location.href='#sidebarForm'">2 Logotipos por 40€</button>
+            <button style="display:block; margin-bottom:10px; padding:10px; background-color:#ffa000; color:white; border:none; border-radius:8px; cursor:pointer;" onclick="location.href='#sidebarForm'">3 Logotipos por 60€</button>
+            <button style="display:block; padding:10px; background-color:#ffa000; color:white; border:none; border-radius:8px; cursor:pointer;" onclick="location.href='#sidebarForm'">5 Logotipos por 100€</button>
+        </div>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:diogolourencomc@gmail.com">diogolourencomc@gmail.com</a></p>
@@ -244,6 +264,16 @@
                 <a href="#sidebarForm">PEDIR AGORA</a>
             </div>
         </div>
+
+        <div class="how-it-works">
+            <h2>Como Funciona</h2>
+            <ol>
+                <li>Preencha o formulário com informações sobre sua marca.</li>
+                <li>Analisamos suas necessidades e criamos conceitos exclusivos.</li>
+                <li>Você revisa e solicita ajustes.</li>
+                <li>Entregamos o logo nos formatos necessários.</li>
+            </ol>
+        </div>
     </div>
 
     <section class="faq-section">
@@ -272,38 +302,7 @@
         </div>
 
         <h2 style="margin-top: 60px;">Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h4>What is the deadline for delivery of the logo?</h4>
-            <p>The deadline depends on the package you choose, usually between 1 and 5 working days.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Can I request revisions after the logo has been delivered?</h4>
-            <p>Yes, we include revisions in all our packages to guarantee your complete satisfaction.</p>
-        </div>
-        <div class="faq-item">
-            <h4>What formats will I receive my logo in?</h4>
-            <p>We supply files in PNG, JPEG, PDF and vectors (AI or SVG).</p>
-        </div>
-        <div class="faq-item">
-            <h4>Do you provide design services beyond the logo?</h4>
-            <p>Yes, we offer complete visual identity design, including cards and branding materials.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Is the logo exclusive and copyrighted?</h4>
-            <p>Yes, you will have total exclusivity and all commercial use rights.</p>
-        </div>
-        <div class="faq-item">
-            <h4>What payment methods do you accept?</h4>
-            <p>We accept MB Way, Bank Transfer, PayPal and Skrill.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Can I request an urgent logo?</h4>
-            <p>Yes, we have express delivery services for urgent needs.</p>
-        </div>
-        <div class="faq-item">
-            <h4>What happens if I don't like the initial design?</h4>
-            <p>We make adjustments according to your feedback to ensure the perfect design for you.</p>
-        </div>
+        <!-- FAQ content -->
     </section>
 
     <footer>© 2025 Design Logos. All rights reserved.</footer>
@@ -331,6 +330,11 @@
             if (sidebarForm.style.display === 'block') {
                 sidebarForm.scrollIntoView({ behavior: 'smooth' });
             }
+        }
+
+        function showOptions() {
+            const options = document.getElementById('options');
+            options.style.display = options.style.display === 'block' ? 'none' : 'block';
         }
 
         function validarOrcamento() {
