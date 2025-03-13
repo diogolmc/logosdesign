@@ -54,156 +54,28 @@
             line-height: 1.6;
             color: #555;
         }
-        .logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .logos img {
-            width: 320px;
-            border-radius: 12px;
-            border: 2px solid #ffa000;
-            background-color: #fafafa;
-            padding: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .logos img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 111, 0, 0.5);
-        }
-        .contact {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .contact a {
-            display: inline-block;
-            background: #ff6f00;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .contact a:hover {
-            background: #e65100;
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-        }
-        .sidebar-left {
-            width: 260px;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 2px solid #ffa000;
-            position: fixed;
-            top: 40px;
-            left: 15px;
-        }
-        .sidebar-left ul {
-            list-style: none;
-            padding: 0;
-        }
-        #voltarAoTopo {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            background-color: #ff6f00;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease, transform 0.3s ease;
-            z-index: 1000;
-        }
-        #voltarAoTopo.show {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
-        }
-        #voltarAoTopo:hover {
-            background-color: #e65100;
-            transform: scale(1.1);
-        }
-        .faq-section h2 {
-            margin-bottom: 30px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h4 {
-            font-family: 'Oswald', sans-serif;
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-        .faq-item p {
-            color: #555;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .client-reviews-below-faq h2 {
-            text-align: center;
-        }
-        .testimonial {
-            margin-bottom: 20px;
-        }
-        .testimonial p {
-            font-size: 20px;
-            color: #555;
-        }
-        .testimonial strong {
+        input, select, textarea {
             display: block;
-            margin-top: 8px;
-            color: #333;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
         }
-        .special-offer {
-            background-color: #fff8e1;
-            border: 3px dashed #ff6f00;
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            margin-top: 40px;
+        .form-button {
+            background: #ff6f00;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: background 0.3s ease;
         }
-        .special-offer h2 {
-            color: #ff6f00;
-            font-size: 40px;
-            margin-bottom: 25px;
-        }
-        .special-offer p {
-            color: #333;
-            font-size: 26px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .how-it-works {
-            background-color: #f9f9f9;
-            padding: 40px;
-            border-radius: 16px;
-            margin-top: 40px;
-        }
-        .how-it-works h2 {
-            margin-bottom: 30px;
-        }
-        .how-it-works ol {
-            list-style: decimal inside;
-            font-size: 20px;
-            color: #555;
-            line-height: 1.8;
+        .form-button:hover {
+            background: #e65100;
         }
     </style>
 </head>
@@ -216,7 +88,7 @@
         <p>Complete Design: 3-5 business days</p>
         <p>Custom Packages: On request</p>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
-        <button onclick="location.href='#sidebarForm'" style="background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; width:100%;">Request a Logo</button>
+        <a href="#sidebarForm" style="display:block; background-color:#ff6f00; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; text-align:center;">Request a Logo</a>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ffa000;">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:diogolourencomc@gmail.com">diogolourencomc@gmail.com</a></p>
@@ -269,6 +141,38 @@
                 <li>Entregamos o logo nos formatos necessários.</li>
             </ol>
         </div>
+    </div>
+
+    <div class="container" id="sidebarForm">
+        <h2>Request a Logo</h2>
+        <form action="#" method="post">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="style">Estilo do Logotipo</label>
+            <select id="style" name="style" required>
+                <option value="Minimalista">Minimalista</option>
+                <option value="Moderno">Moderno</option>
+                <option value="Clássico">Clássico</option>
+                <option value="Criativo">Criativo</option>
+            </select>
+
+            <label for="budget">Orçamento</label>
+            <select id="budget" name="budget" required>
+                <option value="40€">2 Logotipos - 40€</option>
+                <option value="60€">3 Logotipos - 60€</option>
+                <option value="100€">5 Logotipos - 100€</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="message">Descrição / Mensagem</label>
+            <textarea id="message" name="message" rows="6" placeholder="Descreva seu projeto, ideias e preferências..." required></textarea>
+
+            <button type="submit" class="form-button">Enviar Pedido</button>
+        </form>
     </div>
 
     <section class="faq-section">
