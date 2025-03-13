@@ -181,13 +181,14 @@
         }
         .special-offer h2 {
             color: #ff6f00;
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 25px;
         }
         .special-offer p {
             color: #333;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -235,10 +236,12 @@
         </div>
 
         <div class="special-offer">
-            <h2>Oferta Especial!</h2>
-            <p>2 Logotipos por apenas 40€!</p>
+            <h2>🔥 OFERTA ESPECIAL! 🔥</h2>
+            <p>🎨 2 Logotipos por apenas <strong>40€</strong>!</p>
+            <p>🎨 3 Logotipos por apenas <strong>60€</strong>!</p>
+            <p>🎨 5 Logotipos por apenas <strong>100€</strong>!</p>
             <div class="contact">
-                <a href="#sidebarForm">Pedir Agora</a>
+                <a href="#sidebarForm">PEDIR AGORA</a>
             </div>
         </div>
     </div>
@@ -268,7 +271,7 @@
             </div>
         </div>
 
-        <h2 style="margin-top: 40px;">Frequently Asked Questions</h2>
+        <h2 style="margin-top: 60px;">Frequently Asked Questions</h2>
         <div class="faq-item">
             <h4>What is the deadline for delivery of the logo?</h4>
             <p>The deadline depends on the package you choose, usually between 1 and 5 working days.</p>
@@ -302,28 +305,6 @@
             <p>We make adjustments according to your feedback to ensure the perfect design for you.</p>
         </div>
     </section>
-
-    <div id="sidebarForm" style="display:none; max-width: 600px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; color: #ff6f00;">Request a Logo</h2>
-        <form onsubmit="return validarOrcamento()">
-            <label for="nome">Name:</label><br>
-            <input type="text" id="nome" name="nome" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
-
-            <label for="estilo">Logo style:</label><br>
-            <input type="text" id="estilo" name="estilo" placeholder="Ex: Modern, Minimalist" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
-
-            <label for="valor">Available budget (€):</label><br>
-            <input type="number" id="valor" name="valor" min="25" placeholder="Minimum amount: 25€" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" required><br>
-
-            <label for="mensagem">Additional Message:</label><br>
-            <textarea id="mensagem" name="mensagem" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea><br>
-
-            <button type="submit" style="background-color:#ff6f00; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; width:100%;">Send Request</button>
-        </form>
-    </div>
 
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
