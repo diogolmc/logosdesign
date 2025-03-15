@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -360,16 +359,17 @@
     </section>
 
     <section class="form-section" id="formularioPedido">
-    <h2>Logo Request</h2>
-    <form action="mailto:artoflogos.contact@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="Nome" placeholder="Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <input type="text" name="Estilo" placeholder="Logo style (modern, classic, etc.)" required>
-        <input type="number" name="Orçamento" min="25" placeholder="Budget (€) min value 25€" required>
-        <textarea name="Mensagem" rows="5" placeholder="Description / Message" required></textarea>
-        <input type="submit" value="Send Request">
-    </form>
-</section>
+        <h2>Logo Request</h2>
+        <form action="https://formspree.io/f/mdkekedd" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="estilo" placeholder="Logo style (modern, classic, etc.)" required>
+            <input type="number" name="budget" min="25" placeholder="Budget (€) min value 25€" required>
+            <textarea name="mensagem" rows="5" placeholder="Description / Message" required></textarea>
+            <input type="hidden" name="_next" value="https://diogolmc.github.io/obrigado.html">
+            <input type="submit" value="Send Request">
+        </form>
+    </section>
 
     <footer>© 2025 Design Logos. All rights reserved.</footer>
     <button id="voltarAoTopo" title="Back to Top">↑</button>
@@ -391,3 +391,4 @@
     </script>
 </body>
 </html>
+
