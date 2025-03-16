@@ -172,23 +172,49 @@
             color: #333;
         }
         .special-offer {
-            background-color: #fff8e1;
-            border: 3px dashed #ff6f00;
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .special-offer h2 {
-            color: #ff6f00;
-            font-size: 40px;
-            margin-bottom: 25px;
-        }
-        .special-offer p {
-            color: #333;
-            font-size: 26px;
-            font-weight: bold;
-            margin: 10px 0;
+    background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+    border: 3px solid #ff6f00;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 10px 25px rgba(255, 111, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+.special-offer h2 {
+    color: #d84315;
+    font-size: 42px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.special-offer p {
+    color: #333;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.special-offer .offer-price {
+    color: #e65100;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.special-offer .offer-note {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #d50000;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
         }
         .how-it-works {
             background-color: #f9f9f9;
@@ -283,14 +309,13 @@
         </div>
 
         <div class="special-offer">
-            <h2>🔥 SPECIAL OFFER! 🔥</h2>
-            <p>  2 Logos ---> <strong>40€</strong>!</p>
-            <p>  3 Logos ---> <strong>60€</strong>!</p>
-            <p>  5 Logos ---> <strong>100€</strong>!</p>
-            <p style="margin-top: 20px; font-size: 20px; color: red; font-weight: bold;">
-                👉 Mention the desired offer in the form message to guarantee the discount! 👈
-            </p>
-        </div>
+    <h2>🔥 Limited Time Special Offer! 🔥</h2>
+    <p><strong>✨ 2 Logos</strong> → <span class="offer-price">40€</span></p>
+    <p><strong>✨ 3 Logos</strong> → <span class="offer-price">60€</span></p>
+    <p><strong>✨ 5 Logos</strong> → <span class="offer-price">100€</span></p>
+    <p class="offer-note">📢 Mention your chosen offer in the message field to claim your discount!</p>
+</div>
+
 
         <div class="how-it-works">
             <h2>How it works</h2>
